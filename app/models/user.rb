@@ -21,7 +21,7 @@ class User < ApplicationRecord
   end
 
   def channels
-    { email: email?, telegram: telegram? }.select { |k,v| v }.keys
+    { email: email?, telegram: telegram? }.select { |_k, v| v }.keys
   end
 
   def telegram?
